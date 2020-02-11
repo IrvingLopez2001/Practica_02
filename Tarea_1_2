@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+class Restaurant():
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name=restaurant_name
+        self.cuisine_type=cuisine_type
+        self.number_served=0
+    def describe_restaurant(self):
+        print('El restaurant "'+self.restaurant_name.title()+'" vende comida '+self.cuisine_type.title())
+    def open_restaurant(self):
+        print('El restaurant "'+self.restaurant_name.title()+'" esta abierto')
+    def customers_served(self):
+        print('Se han atendido a '+str(self.number_served)+' en total')
+    def set_number_served(self,customers):
+        if customers>=self.number_served:
+            self.number_served= customers
+        else:
+            print('No se puede hacer eso')
+print 'Nombre del restaurant:'
+restaurant_name= raw_input()
+print 'Tipo de comida'
+cuisine_type= raw_input()
+my_restaurant=Restaurant(restaurant_name, cuisine_type)
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
+my_restaurant.set_number_served(4)
+my_restaurant.customers_served()
+my_restaurant.set_number_served(29)
+my_restaurant.customers_served()
+my_restaurant.set_number_served(10)
+my_restaurant.customers_served()
+my_restaurant.set_number_served(50)
+my_restaurant.customers_served()
+
