@@ -55,8 +55,8 @@ class Car():
     def get_descriptive_name(self):
         long_name = str(self.year)+' '+self.make +' '+self.model
         return long_name.title()
-    def read_odometer(sefl):
-        print('This car has ' + str(sefl.odometer_reading) + ' miles on it')
+    def read_odometer(self):
+        print('This car has ' + str(self.odometer_reading) + ' miles on it')
     def tires(self):
         print('El carro cuenta con '+str(self.car_tires)+' llantas')
     def power(self):
